@@ -50,7 +50,7 @@ plt.show()
 
 ```
 
-![alt text]('https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Polynomials.png')
+![alt text](https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Polynomials.png)
 
 
 
