@@ -21,7 +21,7 @@ than the straightforward implementaion (modified_gs=False).
 # Examples
 
 ## Polynomials
-A simple example orthonormalizing the polynomials 1, x, x^2 for the interval [-1, 1].
+A simple example orthonormalizing the polynomials 1, x, x^2, x^3 for the interval [-1, 1].
 
 ```py
 from ortho_basis import OrthoBasis
