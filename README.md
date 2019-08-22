@@ -3,7 +3,7 @@ A python module for orthonormalizing an arbitrary set of one-dimensional functio
 
 The used scalar product is defined by
 
-<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product.png" width="40%">
+<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product_1.png" width="40%">
 
 The method 'get_scalar_product' could be overwritten in order to
 change the scalar product definition or adjust numerical parameters
@@ -54,7 +54,6 @@ for i in exponents:
     plt.plot(x, B_analytical[i], '%s-'  %colors[i])
     plt.plot(x, B[:, i], '%s:' %colors[i], linewidth=3)
 plt.show()
-
 ```
 
 The solid lines represent the analytical solutions while the dashed ones represent the outcomes of the code.
@@ -68,8 +67,11 @@ print(abs(ob.get_corr_matrix() - np.eye(exponents.size)).max())
 With increasing number of Gram-Schmidt iterations (adding new orthonormal functions) the errors should increase. 
 
 ## Define own scalar product
-In order to use a different scalar product or different integration parameters replace the method get_scalar_product by a custom one.
+In order to use a different scalar product, for example
+<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product_2.png" width="40%">
+or different integration parameters replace the method get_scalar_product by a custom function
 ```py
+import scipy.integrate as integrate
 def get_scalar_product(v1, v2):
     return integrate.quad(lambda x: v1(x) * v2(x) * np.exp(-x), *ob.interval, epsabs=1.49e-18)[0]
 
