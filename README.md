@@ -1,5 +1,5 @@
 # OrthoBasis
-A python module for orthonormalizing an arbitrary set of one-dimensional functions (nor arrays!) within an arbitrary interval using the Gram-Schmidt process and numerical integration.
+A python module for orthonormalizing an arbitrary set of one-dimensional functions (not arrays!) within an arbitrary interval using the Gram-Schmidt process and numerical integration.
 
 The used scalar product is defined by
 
