@@ -11,6 +11,13 @@ as numerical stability is an issue.
 The stability should be always checked, e.g. by confirming that the scalar products 
 between two different orthonormalized functions is zero.
 
+Note that the modified Gram-Schmidt implementation is used as default which 
+is numeracially more stable, however, computationally more demanding 
+than the straightforward implementaion (modified_gs=False).
+
+
+
+
 # Examples
 
 ## Polynomials

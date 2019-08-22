@@ -157,4 +157,4 @@ if __name__ == '__main__':
         plt.plot(x, B_analytical[i], '%s-'  %colors[i])
         plt.plot(x, B[:, i], '%s:' %colors[i], linewidth=3)
 
-    plt.savefig('docs/Polynomials.png')
+    plt.show()
