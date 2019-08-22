@@ -13,13 +13,15 @@ between two different orthonormalized functions is zero.
 
 # Examples
 
-# Polynomials
+## Polynomials
 A simple example orthonormalizing the polynomials 1, x, x^2 for the interval [-1, 1].
 
 ```py
 from ortho_basis import OrthoBasis
 import matplotlib.pyplot as plt
+import numpy as np
 
+# create list of polynomial functions
 v_list = []
 exponents = np.arange(4)
 for d in exponents: 
@@ -27,11 +29,12 @@ for d in exponents:
         return x**d
     v_list.append(f)
 
-ob = OrthoBasis(interval=(-1, 1), modified_gs=True) 
+interval = (-1, 1)
+ob = OrthoBasis(interval=interval, modified_gs=True) 
 ob.fit(v_list)
 
 colors = ['g', 'r', 'b', 'k']
-x = np.linspace(-1, 1, 100)
+x = np.linspace(*interval, 100)
 
 # get outputs in orthonormal basis set B either through linear mapping
 # of outputs of reference basis set
@@ -53,8 +56,18 @@ for i in exponents:
 plt.show()
 
 ```
+
 The solid lines represent the analytical solutions while the dashed ones represent the outcomes of the code.
 ![alt text](https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Polynomials.png)
+
+Check numerical stability by looking at the correlation matrix (scalar products between all 'orthonormal' functions).
+```py
+print(ob.get_corr_matrix())
+print(abs(ob.get_corr_matrix() - np.eye(exponents.size)).max())
+```
+With increasing number of Gram-Schmidt iterations (adding new orthonormal functions) the errors should increase. 
+
+
 
 
 
