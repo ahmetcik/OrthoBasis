@@ -3,7 +3,7 @@ A python module for orthonormalizing an arbitrary set of one-dimensional functio
 
 The used scalar product is defined by
 
-![alt text](https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product.png)
+![alt text](https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product.png){:height="50%" width="50%"}
 
 The method 'get_scalar_product' could be overwritten in order to
 change the scalar product definition or adjust numerical parameters
