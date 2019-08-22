@@ -8,7 +8,7 @@ The used scalar product is defined by
 The method 'get_scalar_product' could be overwritten in order to
 change the scalar product definition or adjust numerical parameters
 as numerical stability is an issue. 
-The stability should be always checked, e.g. by confirming that that scalar products 
+The stability should be always checked, e.g. by confirming that the scalar products 
 between two different orthonormalized functions is zero.
 
 # Examples
