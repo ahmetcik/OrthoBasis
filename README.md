@@ -3,7 +3,7 @@ A python module for orthonormalizing an arbitrary set of one-dimensional functio
 
 The used scalar product is defined by
 
-<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product_1.png" width="40%">
+<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product1.png" width="30%">
 
 The method 'get_scalar_product' could be overwritten in order to
 change the scalar product definition or adjust numerical parameters
@@ -76,7 +76,7 @@ With increasing number of Gram-Schmidt iterations (adding new orthonormal functi
 ## Define own scalar product
 In order to use a different scalar product, for example
 
-<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product_2.png" width="40%">
+<img src="https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product2.png" width="30%">
 
 or different integration parameters replace the method get_scalar_product by a custom function
 ```py
