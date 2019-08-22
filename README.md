@@ -2,14 +2,16 @@
 A python module for orthonormalizing an arbitrary set of one-dimensional functions (nor arrays!) within an arbitrary interval using the Gram-Schmidt process and numerical integration.
 
 The used scalar product is defined by
+
 ![alt text](https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Scalar_product.pdf)
+
 The method 'get_scalar_product' could be overwritten in order to
 change the scalar product definition or adjust numerical parameters
 as numerical stability is an issue. 
 The stability should be always checked, e.g. by confirming that that scalar products 
 between two different orthonormalized functions is zero.
 
-## Example
+# Examples
 
 # Polynomials
 A simple example orthonormalizing the polynomials 1, x, x^2 for the interval [-1, 1].
