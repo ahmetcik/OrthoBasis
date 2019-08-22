@@ -23,7 +23,7 @@ ob.get_scalar_product = get_scalar_product
 ob.fit(v_list)
 
 colors = ['g', 'r', 'b', 'k']
-x = np.linspace(-2,3, 100)
+x = np.linspace(-2,8, 100)
 
 # get outputs in orthonormal basis set B either through linear mapping
 # of outputs of reference basis set 

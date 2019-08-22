@@ -67,7 +67,17 @@ print(abs(ob.get_corr_matrix() - np.eye(exponents.size)).max())
 ```
 With increasing number of Gram-Schmidt iterations (adding new orthonormal functions) the errors should increase. 
 
+## Define own scalar product
+In order to use a different scalar product or different integration parameters replace the method get_scalar_product by a custom one.
+```py
+def get_scalar_product(v1, v2):
+    return integrate.quad(lambda x: v1(x) * v2(x) * np.exp(-x), *ob.interval, epsabs=1.49e-18)[0]
 
+interval = (0, np.inf)
+ob = OrthoBasis(interval=interval, modified_gs=True)
+ob.get_scalar_product = get_scalar_product
+ob.fit(v_list)
+```
 
 
 
