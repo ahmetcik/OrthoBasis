@@ -149,9 +149,9 @@ if __name__ == '__main__':
 
     # Analytical solution for orthonormal basis set (for comparison)
     B_analytical = [np.ones(x.size) * 1/np.sqrt(2),
-                    np.sqrt(3. / 2.)            * x,
-                    np.sqrt(45. / 8.)           * (x**2 - 1. / 3.),
-                    4 * (x**3 - 3. / 5. * x)]
+                    np.sqrt(3. / 2.)                   * x,
+                    np.sqrt(45. / 8.)                  * (x**2 - 1. / 3.),
+                    np.sqrt(1. / (2. / 7. - 6. / 25.)) * (x**3 - 3. / 5. * x)]
     
     for i in exponents:
         plt.plot(x, B_analytical[i], '%s-'  %colors[i])

@@ -21,7 +21,7 @@ from ortho_basis import OrthoBasis
 import matplotlib.pyplot as plt
 
 v_list = []
-exponents = np.arange(3)
+exponents = np.arange(4)
 for d in exponents: 
     def f(x, d=d):
         return x**d
@@ -43,8 +43,9 @@ B = np.transpose([b(x) for b in ob.b_list])
 
 # Analytical solution for orthonormal basis set (for comparison)
 B_analytical = [np.ones(x.size) * 1/np.sqrt(2),
-                np.sqrt(3/2)*x,
-                np.sqrt(45/8)*(x**2-1./3.)]
+                np.sqrt(3. / 2.)                   * x,
+                np.sqrt(45. / 8.)                  * (x**2 - 1. / 3.),
+                np.sqrt(1. / (2. / 7. - 6. / 25.)) * (x**3 - 3. / 5. * x)]
 
 for i in exponents:
     plt.plot(x, B_analytical[i], '%s-'  %colors[i])
@@ -52,7 +53,7 @@ for i in exponents:
 plt.show()
 
 ```
-
+The solid lines represent the analytical solutions while the dashed ones represent the outcomes of the code.
 ![alt text](https://github.com/ahmetcik/OrthoBasis/blob/master/docs/Polynomials.png)
 
 
